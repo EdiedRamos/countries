@@ -1,10 +1,10 @@
-import { Search } from "../../Components";
+import { Filter } from "../../Layouts";
 
 export const Homepage = () => {
   return (
-    <div>
-      <Search />
+    <>
+      <Filter />
       <p>Homepage</p>
-    </div>
+    </>
   );
 };

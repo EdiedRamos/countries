@@ -13,6 +13,12 @@
   --dark-gray: hsl(0, 0%, 52%);
   --very-light-gray: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
+
+  --padding: 10px;
+  --border-radius: 4px;
+  --font-size-homepage: 14px;
+  --font-size-detailpage: 16px;
+  --separate-space: 24px;
 }
 
 .dark-theme {
@@ -21,4 +27,8 @@
 
 .light-theme {
   color: var(--very-dark-blue-ligth);
+}
+
+.App {
+  /* background-color: red; */
 }

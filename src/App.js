@@ -4,10 +4,10 @@ import { Header } from "./Layouts";
 
 const App = () => {
   return (
-    <>
+    <div className="App">
       <Header />
       <AppRouter />
-    </>
+    </div>
   );
 };
 

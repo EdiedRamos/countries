@@ -1,2 +1,32 @@
+.label-search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--dark-blue);
+  border-radius: 4px;
+  margin-bottom: var(--separate-space);
+}
+
 .search {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search::placeholder {
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .label-search {
+    width: 30%;
+    margin-bottom: 0;
+  }
 }
