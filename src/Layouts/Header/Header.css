@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 60px;
+  align-items: center;
+}
+
+.theme-mode {
+  display: flex;
+  align-items: center;
+}
+
+.theme-mode p {
+  margin-left: 5px;
+}
+
+.header-dark-theme {
+  background-color: var(--dark-blue);
+}
+
+.header-light-theme {
+  background-color: var(--white);
+}
