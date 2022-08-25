@@ -1,19 +1,19 @@
 import "./Card.css";
 
-export const Card = () => {
+export const Card = (props) => {
   return (
     <div className="card-container dark-theme">
-      <img src="https://flagcdn.com/ax.svg" />
+      <img src={props.flags.svg} />
       <div className="card-info">
-        <h3>Colombia</h3>
+        <h3>{props.name.common}</h3>
         <p className="card-info-title">Population:</p>
-        <p>45,000,000</p>
+        <p>{Intl.NumberFormat().format(props.population)}</p>
         <br />
         <p className="card-info-title">Region:</p>
-        <p>Europe</p>
+        <p>{props.region}</p>
         <br />
         <p className="card-info-title">Capital:</p>
-        <p>Berlin</p>
+        <p>{props.capital}</p>
       </div>
     </div>
   );
