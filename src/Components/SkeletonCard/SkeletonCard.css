@@ -1,0 +1,38 @@
+.skeleton-container {
+  width: 250px;
+  height: 300px;
+}
+
+.skeleton-image {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  background: linear-gradient(
+    90deg,
+    rgb(182, 179, 179) 0px,
+    rgba(212, 212, 212, 0.9) 40px,
+    rgb(190, 189, 189) 80px
+  );
+}
+
+.skeleton-info {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  background: linear-gradient(
+    90deg,
+    #ccc 0px,
+    rgb(229 229 229 / 90%) 40px,
+    #ccc 80px
+  );
+}
+
+.skeleton-image,
+.skeleton-info {
+  height: 50%;
+  animation: shimmer 1.5s infinite;
+  background-size: 300%;
+  background-position: 100% 0;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -100% 0;
+  }
+}

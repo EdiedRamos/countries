@@ -29,6 +29,10 @@
   color: var(--very-dark-blue-ligth);
 }
 
-.App {
-  /* background-color: red; */
+.cards-container {
+  margin: var(--separate-space) 5%;
+  display: grid;
+  gap: var(--separate-space);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
 }

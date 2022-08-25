@@ -1,0 +1,37 @@
+.card-container {
+  width: 250px;
+  height: 320px;
+  margin: 5px;
+  border-radius: var(--border-radius);
+  background-color: var(--dark-blue);
+  font-size: var(--font-size-homepage);
+}
+
+.card-container > img {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.card-info h3 {
+  margin-bottom: 5px;
+}
+
+.card-info-title {
+  margin-right: 5px;
+}
+
+.card-info p,
+.card-info h5 {
+  display: inline-block;
+}
+
+.card-info {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.card-info-title {
+  font-weight: bold;
+}
