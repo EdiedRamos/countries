@@ -1,4 +1,4 @@
-import { SEARCH, SET_LIST } from "../Constants";
+import { SEARCH, SET_LIST, SET_REGION } from "../Constants";
 
 import { getCountries } from "../../Apis/getCountries";
 
@@ -18,5 +18,14 @@ export const setList = () => {
         },
       })
     );
+  };
+};
+
+export const setRegion = (region) => {
+  return {
+    type: SET_REGION,
+    payload: {
+      region,
+    },
   };
 };

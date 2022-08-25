@@ -12,7 +12,9 @@ export const Cards = () => {
       {countries.length === 0 ? (
         <SkeletonCards />
       ) : (
-        countries.map((countrie) => <Card {...countrie} />)
+        countries.map((country) => (
+          <Card key={country.name.common} {...country} />
+        ))
       )}
     </div>
   );

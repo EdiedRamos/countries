@@ -1,4 +1,4 @@
-import { SEARCH, SET_LIST } from "../Constants";
+import { SEARCH, SET_LIST, SET_REGION } from "../Constants";
 
 const initialState = {
   countries: [],
@@ -11,14 +11,39 @@ const initialState = {
 
 export const listReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SEARCH:
-      return state;
-    case SET_LIST:
+    case SEARCH: {
+      const { country, region } = state.queries;
+      let filtered = state.countries;
+      if (country) {
+        filtered = filtered.filter((_country) =>
+          _country.name.toLowerCase().includes(country)
+        );
+      }
+      if (region) {
+        filtered = filtered.filter((_country) => _country.region === region);
+      }
+      return {
+        ...state,
+        filtered,
+      };
+    }
+    case SET_LIST: {
       return {
         ...state,
         countries: action.payload.countries,
         filtered: action.payload.countries,
       };
+    }
+    case SET_REGION: {
+      const { region } = action.payload;
+      return {
+        ...state,
+        queries: {
+          ...state.queries,
+          region,
+        },
+      };
+    }
     default:
       return state;
   }
