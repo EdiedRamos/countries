@@ -1,4 +1,4 @@
-import { SEARCH, SET_LIST, SET_REGION } from "../Constants";
+import { SEARCH, SET_COUNTRY, SET_LIST, SET_REGION } from "../Constants";
 
 const initialState = {
   countries: [],
@@ -16,7 +16,7 @@ export const listReducer = (state = initialState, action) => {
       let filtered = state.countries;
       if (country) {
         filtered = filtered.filter((_country) =>
-          _country.name.toLowerCase().includes(country)
+          _country.name.common.toLowerCase().includes(country)
         );
       }
       if (region) {
@@ -25,6 +25,16 @@ export const listReducer = (state = initialState, action) => {
       return {
         ...state,
         filtered,
+      };
+    }
+    case SET_COUNTRY: {
+      const { country } = action.payload;
+      return {
+        ...state,
+        queries: {
+          ...state.queries,
+          country,
+        },
       };
     }
     case SET_LIST: {

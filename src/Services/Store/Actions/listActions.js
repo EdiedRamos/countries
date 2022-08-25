@@ -1,10 +1,19 @@
-import { SEARCH, SET_LIST, SET_REGION } from "../Constants";
+import { SEARCH, SET_COUNTRY, SET_LIST, SET_REGION } from "../Constants";
 
 import { getCountries } from "../../Apis/getCountries";
 
 export const search = () => {
   return {
     type: SEARCH,
+  };
+};
+
+export const setCountry = (country) => {
+  return {
+    type: SET_COUNTRY,
+    payload: {
+      country,
+    },
   };
 };
 
