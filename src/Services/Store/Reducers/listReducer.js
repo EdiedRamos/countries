@@ -16,7 +16,7 @@ export const listReducer = (state = initialState, action) => {
       let filtered = state.countries;
       if (country) {
         filtered = filtered.filter((_country) =>
-          _country.name.common.toLowerCase().includes(country)
+          _country.name.common.toLowerCase().includes(country.toLowerCase())
         );
       }
       if (region) {

@@ -1,8 +1,10 @@
 import "./Card.css";
+import { useGetTheme } from "../../Hooks/useGetTheme";
 
 export const Card = (props) => {
+  const theme = useGetTheme();
   return (
-    <div className="card-container dark-theme">
+    <div className={`card-container ${theme}-theme`}>
       <img src={props.flags.svg} />
       <div className="card-info">
         <h3>{props.name.common}</h3>

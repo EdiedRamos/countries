@@ -1,8 +1,8 @@
 .select {
-  background-color: var(--dark-blue);
   padding: var(--padding);
   border-radius: var(--border-radius);
   font-size: var(--font-size-homepage);
+  border: 0;
 }
 
 .select:focus {

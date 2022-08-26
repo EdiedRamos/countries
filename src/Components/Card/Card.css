@@ -3,8 +3,11 @@
   height: 320px;
   margin: 5px;
   border-radius: var(--border-radius);
-  background-color: var(--dark-blue);
   font-size: var(--font-size-homepage);
+}
+
+.card-container:hover {
+  cursor: pointer;
 }
 
 .card-container > img {
@@ -33,5 +36,5 @@
 }
 
 .card-info-title {
-  font-weight: bold;
+  font-weight: 600;
 }

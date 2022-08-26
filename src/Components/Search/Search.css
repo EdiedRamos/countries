@@ -3,7 +3,6 @@
   align-items: center;
   width: 100%;
   padding: 10px;
-  background-color: var(--dark-blue);
   border-radius: 4px;
   margin-bottom: var(--separate-space);
 }

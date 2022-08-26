@@ -23,10 +23,19 @@
 
 .dark-theme {
   color: var(--white);
+  background-color: var(--dark-blue);
+  box-shadow: 0 0 5px var(--very-dark-blue-ligth);
 }
 
 .light-theme {
   color: var(--very-dark-blue-ligth);
+  background-color: var(--white);
+  box-shadow: 0 0 5px var(--dark-gray);
+}
+
+.dark-theme:hover:not(header),
+.light-theme:hover:not(header) {
+  opacity: 0.8;
 }
 
 .cards-container {
