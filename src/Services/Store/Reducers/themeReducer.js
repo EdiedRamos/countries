@@ -1,15 +1,18 @@
 import { SET_THEME } from "../Constants";
 
+const getThemeFromLS = () => {
+  return localStorage.getItem("theme") || "dark";
+};
+
 const initialState = {
-  // true is for DarkTheme and false for LightTheme
-  theme: true,
+  theme: getThemeFromLS(),
 };
 
 export const themeReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_THEME:
       return {
-        theme: !state.theme,
+        theme: state.theme.startsWith("d") ? "light" : "dark",
       };
     default:
       return state;
