@@ -1,13 +1,7 @@
-import { DARK_THEME, LIGHT_THEME } from "../Constants";
+import { SET_THEME } from "../Constants";
 
-export const setDarkTheme = () => {
+export const setTheme = () => {
   return {
-    type: DARK_THEME,
-  };
-};
-
-export const setLightTheme = () => {
-  return {
-    type: LIGHT_THEME,
+    type: SET_THEME,
   };
 };

@@ -1,0 +1,15 @@
+.theme-mode {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  user-select: none;
+}
+
+.theme-mode p {
+  margin-left: 5px;
+}
+
+.theme-mode:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}

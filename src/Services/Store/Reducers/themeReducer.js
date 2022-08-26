@@ -1,18 +1,15 @@
-import { LIGHT_THEME, DARK_THEME } from "../Constants";
+import { SET_THEME } from "../Constants";
 
 const initialState = {
-  theme: "dark-theme",
+  // true is for DarkTheme and false for LightTheme
+  theme: true,
 };
 
 export const themeReducer = (state = initialState, action) => {
   switch (action.type) {
-    case DARK_THEME:
+    case SET_THEME:
       return {
-        theme: "dark-theme",
-      };
-    case LIGHT_THEME:
-      return {
-        theme: "light-theme",
+        theme: !state.theme,
       };
     default:
       return state;
