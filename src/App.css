@@ -38,6 +38,10 @@
   opacity: 0.8;
 }
 
+.custom-margin {
+  margin: 1rem 5%;
+}
+
 .cards-container {
   margin: var(--separate-space) 5%;
   display: grid;

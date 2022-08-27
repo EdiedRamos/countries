@@ -36,8 +36,9 @@
 
 .loading {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: var(--font-size-detailpage);
   padding: 1rem;
+  border-radius: var(--border-radius);
 }
 
 @media (min-width: 768px) {
