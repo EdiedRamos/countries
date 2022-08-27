@@ -14,7 +14,8 @@ const getListFromKeys = (object) => {
 export const CountryDetail = ({ country }) => {
   const info = useGetCountry(country);
   const theme = useGetTheme();
-  if (info.status) return <p className="loading dark-theme">{info.status}</p>;
+  if (info.status)
+    return <p className={`loading ${theme}-theme`}>{info.status}</p>;
   return (
     <div
       id="country-detail"
