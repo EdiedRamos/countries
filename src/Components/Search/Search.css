@@ -5,9 +5,11 @@
   padding: 10px;
   border-radius: 4px;
   margin-bottom: var(--separate-space);
+  font-size: var(--font-size-homepage);
 }
 
 .search {
+  font-size: inherit;
   background-color: inherit;
   color: inherit;
   border: none;
@@ -21,6 +23,16 @@
 
 .search::placeholder {
   color: inherit;
+}
+
+#close-circle {
+  padding: 2px;
+}
+
+#close-circle:hover {
+  transform: scale(1.3);
+  transition: transform 1s;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

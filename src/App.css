@@ -16,25 +16,25 @@
 
   --padding: 10px;
   --border-radius: 4px;
-  --font-size-homepage: 14px;
-  --font-size-detailpage: 16px;
+  --font-size-homepage: 15px;
+  --font-size-detailpage: 17px;
   --separate-space: 24px;
 }
 
 .dark-theme {
   color: var(--white);
   background-color: var(--dark-blue);
-  box-shadow: 0 0 5px var(--very-dark-blue-ligth);
+  box-shadow: 0 0 3px var(--very-dark-blue-ligth);
 }
 
 .light-theme {
   color: var(--very-dark-blue-ligth);
   background-color: var(--white);
-  box-shadow: 0 0 5px var(--dark-gray);
+  box-shadow: 0 0 3px var(--dark-gray);
 }
 
-.dark-theme:hover:not(header),
-.light-theme:hover:not(header) {
+.dark-theme:hover:not(header, #country-detail),
+.light-theme:hover:not(header, #country-detail) {
   opacity: 0.8;
 }
 
