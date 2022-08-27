@@ -14,7 +14,6 @@ const getListFromKeys = (object) => {
 export const CountryDetail = ({ country }) => {
   const info = useGetCountry(country);
   const theme = useGetTheme();
-  console.log(info);
   return info ? (
     <div
       id="country-detail"
