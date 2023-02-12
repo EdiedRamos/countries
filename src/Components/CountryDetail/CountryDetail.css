@@ -1,12 +1,14 @@
 #country-flag {
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
   width: 100%;
 }
 
-#country-detail {
+.country-detail {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1rem;
   border-radius: var(--border-radius);
 }
@@ -31,7 +33,7 @@
 }
 
 #border-list p:first-child {
-  margin: 0;
+  margin-left: 0;
 }
 
 .loading {
@@ -41,13 +43,31 @@
   border-radius: var(--border-radius);
 }
 
+.country-detail__info {
+  width: 100%;
+}
+
+.country-detail__first-group {
+  margin-top: 1rem;
+}
+
+#border-countries,
+.country-detail__second-group {
+  margin-top: 2.5rem;
+}
+
 @media (min-width: 768px) {
-  #country-detail {
+  .country-detail {
     flex-direction: row;
+  }
+
+  .country-detail__info {
+    width: 50%;
   }
 
   #country-flag {
     width: 40%;
     margin-right: 5%;
+    margin-bottom: 0;
   }
 }

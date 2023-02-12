@@ -17,40 +17,49 @@ export const CountryDetail = ({ country }) => {
   if (info.status)
     return <p className={`loading ${theme}-theme`}>{info.status}</p>;
   return (
-    <div
-      id="country-detail"
-      className={`${theme}-theme ${theme}-detail-background`}
-    >
+    <div className={`country-detail ${theme}-theme ${theme}-detail-background`}>
       <img
         src={info.flags.svg}
         id="country-flag"
         alt={`flag from ${info.name.common}`}
       />
-      <div>
-        <div>
-          <h3>{info.name.common}</h3>
-          <p className="card-info-title">Navite Name:</p>
+      <div className="country-detail__info">
+        <h3>{info.name.common}</h3>
+        <div className="country-detail__first-group">
           <p>
+            <span className="card-info-title">Navite Name:</span>{" "}
             {info.name.nativeName[getKeys(info.name.nativeName)[0]].official}
           </p>
-          <p className="card-info-title">Population:</p>
-          <p>{Intl.NumberFormat().format(info.population)}</p>
-          <p className="card-info-title">Region:</p>
-          <p>{info.region}</p>
-          <p className="card-info-title">Sub Region:</p>
-          <p>{info.subregion}</p>
-          <p className="card-info-title">Capital:</p>
-          <p>{info.capital}</p>
-          <p className="card-info-title">Top Level Domain:</p>
-          <p>{info.tld}</p>
-          <p className="card-info-title">Currencies:</p>
-          <p>{info.currencies[getKeys(info.currencies)[0]].name}</p>
-          <p className="card-info-title">Languages:</p>
-          <div>
-            {getListFromKeys(info?.languages).map((language) => (
-              <p key={language}>{language}</p>
-            ))}
-          </div>
+          <p>
+            <span className="card-info-title">Population:</span>{" "}
+            {Intl.NumberFormat().format(info.population)}
+          </p>
+          <p>
+            <span className="card-info-title">Region:</span> {info.region}
+          </p>
+          <p>
+            <span className="card-info-title">Sub Region:</span>{" "}
+            {info.subregion}
+          </p>
+          <p>
+            <span className="card-info-title">Capital:</span> {info.capital}
+          </p>
+        </div>
+        <div className="country-detail__second-group">
+          <p>
+            <span className="card-info-title">Top Level Domain:</span>{" "}
+            {info.tld}
+          </p>
+          <p>
+            <span className="card-info-title">Currencies:</span>{" "}
+            {info.currencies[getKeys(info.currencies)[0]].name}
+          </p>
+          <p>
+            <span className="card-info-title">Languages:</span>{" "}
+            {getListFromKeys(info?.languages)
+              .map((language) => language)
+              .join(", ")}
+          </p>
         </div>
         <div id="border-countries">
           <p className="card-info-title">Border Countries:</p>

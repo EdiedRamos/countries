@@ -33,8 +33,8 @@
   box-shadow: 0 0 3px var(--dark-gray);
 }
 
-.dark-theme:hover:not(header, #country-detail),
-.light-theme:hover:not(header, #country-detail) {
+.dark-theme:hover:not(header, .country-detail),
+.light-theme:hover:not(header, .country-detail) {
   opacity: 0.8;
 }
 
